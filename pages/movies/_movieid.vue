@@ -48,7 +48,7 @@
 import axios from "axios";
 
 export default {
-  name: "single-movie",
+  name: "singleMovie",
   head() {
     return {
       title: this.movie.title,
