@@ -13,6 +13,7 @@
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
+    "axios": "^0.24.0",
     "fibers": "^5.0.0",
     "sass": "^1.44.0",
     "sass-loader": "^10.2.0"
