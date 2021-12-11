@@ -12,9 +12,9 @@
    <!-- Loading -->
    <Loading v-if="$fetchState.pending" />
 
-   <!-- Movies -->
+   <!-- movies -->
    <div class="container movies">
-     <!-- Search Movies -->
+     <!-- Search movies -->
      <div v-if="searchInput !== ''" id="movie-grid" class="movies-grid">
        <div class="movie" v-for="(movie, index) in searchedMovies" :key="index">
          <div class="movie-img">
