@@ -9,8 +9,12 @@
      <button @click="clearSearch" v-if="searchInput !== ''" class="button">Clear Search</button>
    </div>
 
+   <!-- Loading -->
+   <Loading v-if="$fetchState.pending" />
+
    <!-- Movies -->
    <div class="container movies">
+     <!-- Search Movies -->
      <div v-if="searchInput !== ''" id="movie-grid" class="movies-grid">
        <div class="movie" v-for="(movie, index) in searchedMovies" :key="index">
          <div class="movie-img">
@@ -40,6 +44,7 @@
          </div>
        </div>
      </div>
+     <!-- Streaming Now -->
      <div v-else id="movie-grid" class="movies-grid">
        <div class="movie" v-for="(movie, index) in movies" :key="index">
          <div class="movie-img">
@@ -117,6 +122,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.loading {
+  padding-top: 120px;
+  align-items: start;
+}
 
 .search {
   display: flex;
